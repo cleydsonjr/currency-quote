@@ -1,0 +1,30 @@
+{
+  "configVersion": 1,
+  "index": "https://cleydsonjr.github.io/currency-quote/index.html",
+  "assetGroups": [
+    {
+      "name": "appshell",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://cleydsonjr.github.io/currency-quote/index.html",
+        "https://cleydsonjr.github.io/currency-quote/inline.322b5d44fb2ed827c90f.bundle.js",
+        "https://cleydsonjr.github.io/currency-quote/main.67cad7b53e076cdd6013.bundle.js",
+        "https://cleydsonjr.github.io/currency-quote/polyfills.ad37cd45a71cb38eee76.bundle.js",
+        "https://cleydsonjr.github.io/currency-quote/styles.c3978af27da8315d5edf.bundle.css"
+      ],
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/css\\?family=Material\\+Icons",
+        "https:\\/\\/fonts\\.googleapis\\.com\\/css\\?family=Roboto|Roboto\\+Mono"
+      ]
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://cleydsonjr.github.io/currency-quote/index.html": "7ac48bb858d0a3c3ac16b2c497ad06f62158e053",
+    "https://cleydsonjr.github.io/currency-quote/inline.322b5d44fb2ed827c90f.bundle.js": "096b8887294dd9dd766255430f4947ca0e1122e8",
+    "https://cleydsonjr.github.io/currency-quote/main.67cad7b53e076cdd6013.bundle.js": "4362f7deeae69aec94bfb0c61280553e4df17a25",
+    "https://cleydsonjr.github.io/currency-quote/polyfills.ad37cd45a71cb38eee76.bundle.js": "f7eca8eeec782793d946a11338044f7426ab3494",
+    "https://cleydsonjr.github.io/currency-quote/styles.c3978af27da8315d5edf.bundle.css": "e4244f2c1e4c7bc859230305e69c15ae1a6c5d99"
+  }
+}
