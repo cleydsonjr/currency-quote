@@ -1,5 +1,5 @@
 .full-page-container {
-  background-image: radial-gradient(circle at top left, #855f39, #5f442b);
+  background-color: #4095f6;
   display: table;
   height: 100%;
   width: 100vw;
@@ -13,18 +13,31 @@
   height: 100%;
 }
 
-.full-page-container__content {
+mat-card {
   box-sizing: border-box;
   margin: 0 auto;
   overflow: hidden;
-  padding: 1rem;
+  padding: 0;
   max-width: 500px;
   width: 100vw;
   height: 100vh;
   min-height: 300px;
-  max-height: 500px;
+  max-height: 800px;
+}
+
+mat-card-content {
+  padding: 1rem;
 }
 
 h1 {
   text-align: center;
+}
+
+#result {
+  margin-top: 3rem;
+}
+
+#amount-input {
+   margin-top: 1.5rem;
+  font-size: 1.5rem;
 }

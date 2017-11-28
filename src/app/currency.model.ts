@@ -1,4 +1,5 @@
 export class Currency {
-  symbol: string;
+  name: string;
   label: string;
+  symbol: string;
 }

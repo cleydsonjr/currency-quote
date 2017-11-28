@@ -11,7 +11,7 @@ export class RatesService {
   }
 
   async getRate(base: string, symbol: string): Promise<Rate> {
-    const response = await this._http.get(`${this.resourcePath}?base=${base}&symbols=${symbol}`).toPromise();
+    const response = await this._http.get(`${this.resourcePath}/latest?base=${base}&symbols=${symbol}`).toPromise();
     return await response as Rate;
   }
 }

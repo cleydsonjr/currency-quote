@@ -1,21 +1,37 @@
 <div class="full-page-container">
 
   <div class="full-page-container__content-wrapper">
-    <mat-card class="full-page-container__content" style="max-width: 500px">
-      <mat-form-field style="width: calc(50% - 0.75rem); margin-right: 1rem">
-        <mat-select [(value)]="base" placeholder="Base">
-          <mat-option *ngFor="let currency of currencies" [value]="currency.symbol">{{currency.label}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field style="width: calc(50% - 0.75rem);">
-        <mat-select [(value)]="target" placeholder="Alvo">
-          <mat-option *ngFor="let currency of currencies" [value]="currency.symbol">{{currency.label}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <div class="mat-typography">
-        Valor calculado:
-        <h1 class="mat-display-3">R$ 2.365,00</h1>
-      </div>
+    <mat-card>
+      <mat-card-title>
+        <mat-toolbar color="primary">
+          Conversor de moedas
+        </mat-toolbar>
+      </mat-card-title>
+      <mat-card-content>
+        <mat-form-field style="width: calc(50% - 0.75rem); margin-right: 1rem">
+          <mat-select [(value)]="base" placeholder="Base" (valueChange)="update()" [disabled]="loading">
+            <mat-option *ngFor="let currency of currencies" [value]="currency">{{ currency.label }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field style="width: calc(50% - 0.75rem);">
+          <mat-select [(value)]="target" placeholder="Alvo" (valueChange)="update()" [disabled]="loading">
+            <mat-option *ngFor="let currency of currencies" [value]="currency">{{ currency.label }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div style="width: 250px; margin: 0 auto">
+          <mat-form-field id="amount-input">
+            <input matInput placeholder="Valor" type="number" [(ngModel)]="amount" (change)="update()" [disabled]="loading">
+            <span matPrefix>{{base.symbol}}&nbsp;</span>
+            <span matSuffix>.00</span>
+          </mat-form-field>
+        </div>
+        <div id="result">
+          <mat-progress-spinner *ngIf="loading" mode="indeterminate" style="margin: 0 auto"></mat-progress-spinner>
+          <div class="mat-typography" *ngIf="!loading">
+            <h1 class="mat-display-3">{{ converted | currency: target.symbol }}</h1>
+          </div>
+        </div>
+      </mat-card-content>
     </mat-card>
   </div>
 </div>
