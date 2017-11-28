@@ -1,0 +1,30 @@
+.full-page-container {
+  background-image: radial-gradient(circle at top left, #855f39, #5f442b);
+  display: table;
+  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.full-page-container__content-wrapper {
+  box-sizing: border-box;
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.full-page-container__content {
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 1rem;
+  max-width: 500px;
+  width: 100vw;
+  height: 100vh;
+  min-height: 300px;
+  max-height: 500px;
+}
+
+h1 {
+  text-align: center;
+}

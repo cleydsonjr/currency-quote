@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Currency} from './currency.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  currencies: Currency[] = [
+    {
+      symbol: 'BRL',
+      label: 'Real'
+    },
+    {
+      symbol: 'USD',
+      label: 'Dolar'
+    },
+    {
+      symbol: 'EUR',
+      label: 'Euro'
+    },
+  ];
+  base = 'BRL';
+  target   = 'USD';
 }
